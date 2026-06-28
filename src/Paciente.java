@@ -1,10 +1,10 @@
 public class Paciente {
-    public String nome;
-    public String cpf;
-    public int idade;
-    public String telefone;
-    public String convenioNome;
-    public boolean ativo;
+    private String nome;
+    private String cpf;
+    private int idade;
+    private String telefone;
+    private String convenioNome;
+    private boolean ativo;
 
     public Paciente(String nome, String cpf) {
         this.nome = nome;
@@ -24,7 +24,6 @@ public class Paciente {
         this.ativo = true;
     }
 
-    // construtor com todos os dados
     public Paciente(String nome, String cpf, int idade, String telefone, String convenioNome) {
         this.nome = nome;
         this.cpf = cpf;
@@ -34,30 +33,31 @@ public class Paciente {
         this.ativo = true;
     }
 
-    // atualiza so idade e telefone
+    // --- GETTERS (Pontes para a Main) ---
+    public String getNome() { return nome; }
+    public String getCpf() { return cpf; }
+    public int getIdade() { return idade; }
+    public String getTelefone() { return telefone; }
+    public String getConvenioNome() { return convenioNome; }
+    public boolean isAtivo() { return ativo; }
+
+    // --- MÉTODOS DE NEGÓCIO ---
     public void complementar(int idade, String telefone) {
         this.idade = idade;
         this.telefone = telefone;
     }
 
-    // atualiza tudo incluindo convenio
     public void complementar(int idade, String telefone, String convenioNome) {
         this.idade = idade;
         this.telefone = telefone;
         this.convenioNome = convenioNome;
     }
 
-    public void desativar() {
-        this.ativo = false;
-    }
+    public void desativar() { this.ativo = false; }
 
     public String exibirResumo() {
-        String status = "Sim";
-        if (!ativo) {
-            status = "Nao";
-        }
         return "Nome: " + nome + " | CPF: " + cpf + " | Idade: " + idade
                 + " | Tel: " + telefone + " | Convenio: " + convenioNome
-                + " | Ativo: " + status;
+                + " | Ativo: " + (ativo ? "Sim" : "Nao");
     }
 }
