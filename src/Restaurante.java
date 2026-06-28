@@ -21,3 +21,12 @@ private Set<Integer> mesas = new HashSet<>();
 public void adicionarMesa(int numero) {
     mesas.add(numero);
 }
+
+// Adicione no Restaurante.java
+public boolean reservarMesa(int numero) {
+    if (mesas.contains(numero)) {
+        System.out.println("Mesa " + numero + " reservada com sucesso.");
+        return true;
+    }
+    return false;
+}
