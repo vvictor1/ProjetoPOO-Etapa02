@@ -866,4 +866,6 @@ public class Main {
             }
         }
     }
+public Produto buscarProduto(int id) {
+    return mapaProdutos.get(id);
 }
