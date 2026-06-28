@@ -9,3 +9,8 @@ public class Restaurante {
         clientes.add(new Cliente(id, nome, telefone));
     }
 }
+private Map<Integer, Produto> mapaProdutos = new HashMap<>();
+
+public void cadastrarProduto(int id, String nome, double preco) {
+    mapaProdutos.put(id, new Produto(id, nome, preco));
+}
