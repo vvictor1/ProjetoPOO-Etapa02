@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Restaurante {
+public class Restaurante {      
 
     private List<Cliente> clientes = new ArrayList<>();
     
@@ -29,4 +29,21 @@ public boolean reservarMesa(int numero) {
         return true;
     }
     return false;
+}
+
+
+private List<Pedido> pedidos = new ArrayList<>();
+
+public void registrarPedido(Pedido p) {
+    pedidos.add(p);
+}
+
+public double calcularTotalMesa(int numeroMesa) {
+    double total = 0;
+    for (Pedido p : pedidos) {
+        if (p.getNumeroMesa() == numeroMesa) {
+            total += p.getValorTotal();
+        }
+    }
+    return total;
 }
