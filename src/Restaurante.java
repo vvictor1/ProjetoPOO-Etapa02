@@ -15,14 +15,12 @@ public void cadastrarProduto(int id, String nome, double preco) {
     mapaProdutos.put(id, new Produto(id, nome, preco));
 }
 
-// Adicione no topo do Restaurante.java
 private Set<Integer> mesas = new HashSet<>();
 
 public void adicionarMesa(int numero) {
     mesas.add(numero);
 }
 
-// Adicione no Restaurante.java
 public boolean reservarMesa(int numero) {
     if (mesas.contains(numero)) {
         System.out.println("Mesa " + numero + " reservada com sucesso.");
