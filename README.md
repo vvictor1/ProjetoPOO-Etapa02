@@ -30,6 +30,6 @@ Matheus: Responsável pela lógica da classe Mesa, gestão de ocupação e pela 
 Pedro: Responsável pela lógica de Pedido e processamento de pagamentos.
 
 Diagrama de Classes
-(<img width="8145" height="1470" alt="Restaurante Client-Product-2026-06-28-231646" src="https://github.com/user-attachments/assets/80c0edf9-7a33-486a-8117-24c2eb574ac2" />
-)
+<img width="8145" height="1470" alt="Restaurante Client-Product-2026-06-28-231646" src="https://github.com/user-attachments/assets/80c0edf9-7a33-486a-8117-24c2eb574ac2" />
+
 
